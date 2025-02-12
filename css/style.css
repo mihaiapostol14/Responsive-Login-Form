@@ -1,0 +1,112 @@
+:root {
+  --icon-color: #aaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1c3551, #0f2027);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card {
+  width: 350px;
+  background: #1c2833;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.form-input {
+  width: 100%;
+  margin-top: 5px;
+  padding: 12px 30px;
+  border: 2px solid transparent; /* FIX: allows JS border color */
+  border-radius: 8px;
+  background: #2c3e50;
+  color: #fff;
+  transition: border-color 0.3s ease; /* smooth effect */
+}
+
+/* LEFT ICON */
+.form-group .user,
+.form-group .lock {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translate(-50%);
+  font-size: 18px;
+  color: var(--icon-color);
+}
+
+/* RIGHT ICON */
+.form-group .eye {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%);
+  font-size: 18px;
+  color: var(--icon-color);
+  cursor: pointer;
+}
+
+.form-hint-text {
+  margin-bottom: 10px;
+}
+
+.form-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  color: #00c6ff;
+}
+
+/* Validation states */
+.form-input.error {
+  border-color: #e74c3c;
+}
+
+.form-input.success {
+  border-color: #32d190;
+}
